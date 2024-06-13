@@ -1,10 +1,7 @@
 // https://aka.ms/devcontainer.json
 {
 	"name": "Existing Docker Compose (Extend)",
-	"dockerComposeFile": [
-		"../docker-compose.yml"
-	],
-	"service": "laravel.test",
+	"image": "trafex/php-nginx",
 	"workspaceFolder": "/var/www/html",
 	"settings": {},
 	"extensions": [
@@ -14,9 +11,9 @@
 		// "onecentlin.laravel5-snippets",
 		// "onecentlin.laravel-blade"
 	],
-	"remoteUser": "sail",
-	"postCreateCommand": "chown -R 1000:1000 /var/www/html --user root"
-	// "forwardPorts": [],
+	"remoteUser": "coder",
+	"postCreateCommand": "chown -R 1000:1000 /var/www/html --user root",
+	"forwardPorts": ["8080"]
 	// "runServices": [],
 	// "shutdownAction": "none",
 }
