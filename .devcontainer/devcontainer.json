@@ -1,7 +1,8 @@
 // https://aka.ms/devcontainer.json
 {
 	"name": "Existing Docker Compose (Extend)",
-	"image": "webdevops/php-nginx:8.3-alpine",
+	"image": "repos.fps2.hu/fps/nginx-php:8.3",
+	"command": "supervisord",
 	"workspaceFolder": "/app",
 	"settings": {},
 	"extensions": [
@@ -11,8 +12,8 @@
 		// "onecentlin.laravel5-snippets",
 		// "onecentlin.laravel-blade"
 	],
-	"remoteUser": "coder",
-	"postCreateCommand": "chown -R 1000:1000 /var/www/html --user root",
+	//"remoteUser": "coder",
+	"postCreateCommand": "chown -R 1000:1000 /app --user root && apk add wget tar gzip gcompat libstdc++6 libuser bash",
 	"forwardPorts": ["8080"]
 	// "runServices": [],
 	// "shutdownAction": "none",
