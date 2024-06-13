@@ -1,8 +1,8 @@
 // https://aka.ms/devcontainer.json
 {
 	"name": "Existing Docker Compose (Extend)",
-	"image": "trafex/php-nginx",
-	"workspaceFolder": "/var/www/html",
+	"image": "webdevops/php-nginx:8.3-alpine",
+	"workspaceFolder": "/app",
 	"settings": {},
 	"extensions": [
 		// "mikestead.dotenv",
